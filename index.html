@@ -21,79 +21,265 @@ border-bottom:1px solid rgba(255,255,255,0.08)
 
 .logo{font-family:'Orbitron',sans-serif;font-size:22px;letter-spacing:2px;color:#4da3ff}
 
-nav a{color:white;text-decoration:none;margin-left:28px;font-size:15px;opacity:.85;position:relative}
+nav a{color:white;text-decoration:none;margin-left:28px;font-size:15px;opacity:.85}
 nav a:hover{color:#4da3ff}
 
 .page{display:none;min-height:100vh;padding:120px 10% 80px}
 .page.active{display:block}
 
-/* hero */
-.hero{height:80vh;display:flex;flex-direction:column;justify-content:center;max-width:650px;background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475');background-size:cover;background-position:center;padding:40px;border-radius:12px}
+/* HERO LAYOUT */
+
+.hero-section{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+align-items:center;
+}
+
+/* HERO */
+
+.hero{
+height:80vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+max-width:650px;
+background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475');
+background-size:cover;
+background-position:center;
+padding:40px;
+border-radius:12px
+}
+
 .hero h1{font-family:'Orbitron',sans-serif;font-size:54px;margin-bottom:20px}
 .hero p{font-size:18px;line-height:1.6;opacity:.9}
 
-.hero button{margin-top:30px;padding:14px 28px;background:#4da3ff;border:none;border-radius:6px;font-size:15px;cursor:pointer}
+.hero button{
+margin-top:30px;
+padding:14px 28px;
+background:#4da3ff;
+border:none;
+border-radius:6px;
+font-size:15px;
+cursor:pointer
+}
 
-.hero-bg{display:none}
+/* BENEFITS */
 
-/* home tech info */
-.home-info{margin-top:90px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+.benefits{
+background:#12182b;
+padding:35px;
+border-radius:12px;
+border:1px solid rgba(255,255,255,0.05);
+height:80vh;
+display:flex;
+flex-direction:column;
+justify-content:center
+}
+
+.benefits h2{
+font-family:'Orbitron';
+margin-bottom:20px;
+color:#4da3ff
+}
+
+.benefits ul{
+line-height:2;
+font-size:17px
+}
+
+/* HOME CARDS */
+
+.home-info{
+margin-top:90px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px
+}
 
 .info-card{
-background:#12182b;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.05);
+background:#12182b;
+border-radius:12px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,0.05);
 transition:.3s
 }
 
-.info-card img{width:100%;height:170px;object-fit:cover;display:block}
+.info-card img{
+width:100%;
+height:170px;
+object-fit:cover;
+display:block
+}
 
 .info-card .info-text{padding:18px}
 
 .info-card h3{margin-bottom:10px;color:#4da3ff}
 
-.info-card:hover{transform:translateY(-6px);border-color:#4da3ff}
+.info-card:hover{
+transform:translateY(-6px);
+border-color:#4da3ff
+}
 
-.section-title{font-size:34px;font-family:'Orbitron',sans-serif;margin-bottom:30px}
+.section-title{
+font-size:34px;
+font-family:'Orbitron',sans-serif;
+margin-bottom:30px
+}
 
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
+/* COURSE CARDS */
 
-.card{background:#1a2340;padding:25px;border-radius:12px;border:1px solid rgba(255,255,255,0.08);transition:.3s;color:white}
-.card:hover{transform:translateY(-6px);border-color:#4da3ff;background:#1f2a4d}
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px
+}
+
+.card{
+background:#1a2340;
+padding:25px;
+border-radius:12px;
+border:1px solid rgba(255,255,255,0.08);
+transition:.3s;
+color:white
+}
+
+.card:hover{
+transform:translateY(-6px);
+border-color:#4da3ff;
+background:#1f2a4d
+}
 
 .checklist li{margin-bottom:8px}
 
 .table-wrap{margin-bottom:40px}
 
-/* course banner images */
-.banner{height:260px;border-radius:10px;margin-bottom:40px;background-size:cover;background-position:center;display:flex;align-items:center;padding:30px;font-size:28px;font-family:'Orbitron';color:white;position:relative}
-.banner::before{content:'';position:absolute;inset:0;background:rgba(10,15,35,0.75);border-radius:10px}
-.banner>*{position:relative;z-index:2}
+/* BANNERS */
 
-.banner.courses{background-image:url('https://images.unsplash.com/photo-1581092919535-7146ff1a590c');background-color:rgba(0,0,0,.45)}
-.banner.roadmap{background-image:url('https://images.unsplash.com/photo-1555255707-c07966088b7b');background-color:rgba(0,0,0,.45)}
-.banner.faq{background-image:url('https://images.unsplash.com/photo-1581091870627-3d9b8d9b6d9c');background-color:rgba(0,0,0,.45)}
-.banner.about{background-image:url('https://images.unsplash.com/photo-1535378917042-10a22c95931a');background-color:rgba(0,0,0,.45)}
+.banner{
+height:260px;
+border-radius:10px;
+margin-bottom:40px;
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding:30px;
+font-size:28px;
+font-family:'Orbitron';
+color:white;
+position:relative
+}
 
-table{width:100%;border-collapse:collapse;background:#12182b;border-radius:10px;overflow:hidden}
-th,td{padding:14px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.banner::before{
+content:'';
+position:absolute;
+inset:0;
+background:rgba(10,15,35,0.75);
+border-radius:10px
+}
+
+.banner>*{
+position:relative;
+z-index:2
+}
+
+.banner.courses{
+background-image:url('https://images.unsplash.com/photo-1581092919535-7146ff1a590c');
+}
+
+.banner.roadmap{
+background-image:url('https://images.unsplash.com/photo-1555255707-c07966088b7b');
+}
+
+.banner.faq{
+background-image:url('https://images.unsplash.com/photo-1581091870627-3d9b8d9b6d9c');
+}
+
+.banner.about{
+background-image:url('https://images.unsplash.com/photo-1535378917042-10a22c95931a');
+}
+
+/* TABLE */
+
+table{
+width:100%;
+border-collapse:collapse;
+background:#12182b;
+border-radius:10px;
+overflow:hidden
+}
+
+th,td{
+padding:14px;
+border-bottom:1px solid rgba(255,255,255,0.06)
+}
+
 th{background:#182242}
 
-.explore-btn{margin-top:20px;padding:12px 22px;background:#4da3ff;border:none;border-radius:6px;cursor:pointer;color:white;font-weight:500}
+/* BUTTON */
+
+.explore-btn{
+margin-top:20px;
+padding:12px 22px;
+background:#4da3ff;
+border:none;
+border-radius:6px;
+cursor:pointer;
+color:white;
+font-weight:500
+}
+
+/* FORM */
 
 form{max-width:500px}
-input,select{width:100%;padding:10px;margin-bottom:14px;border-radius:6px;border:none}
-button.calc{background:#4da3ff;border:none;padding:12px 20px;border-radius:6px}
 
-.text-block{margin-top:35px;line-height:1.7;opacity:.9}
+input,select{
+width:100%;
+padding:10px;
+margin-bottom:14px;
+border-radius:6px;
+border:none
+}
 
-.image-row{margin-top:50px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-.image-row img{width:100%;border-radius:10px}
+button.calc{
+background:#4da3ff;
+border:none;
+padding:12px 20px;
+border-radius:6px
+}
 
-.roadmap{display:flex;flex-direction:column;gap:20px;max-width:600px}
-.step{background:#12182b;padding:18px 22px;border-left:4px solid #4da3ff;border-radius:8px}
+/* ROADMAP */
 
-.faq-item{background:#12182b;padding:20px;margin-bottom:15px;border-radius:8px}
+.roadmap{
+display:flex;
+flex-direction:column;
+gap:20px;
+max-width:600px
+}
 
-footer{text-align:center;padding:30px;background:#0b0f1a;opacity:.7}
+.step{
+background:#12182b;
+padding:18px 22px;
+border-left:4px solid #4da3ff;
+border-radius:8px
+}
+
+/* FAQ */
+
+.faq-item{
+background:#12182b;
+padding:20px;
+margin-bottom:15px;
+border-radius:8px
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#0b0f1a;
+opacity:.7
+}
 
 </style>
 </head>
@@ -111,14 +297,29 @@ footer{text-align:center;padding:30px;background:#0b0f1a;opacity:.7}
 </nav>
 </header>
 
-<div class="hero-bg"></div>
-
 <!-- HOME -->
+
 <section id="home" class="page active">
+
+<div class="hero-section">
+
 <div class="hero">
 <h1>Future Innovators Start Here</h1>
-<p>Hands‑on STEM education for students from Class 6–12. Learn electronics, robotics and artificial intelligence with practical projects and guided mentorship.</p>
+<p>Hands-on STEM education for students from Class 6–12. Learn electronics, robotics and artificial intelligence with practical projects and guided mentorship.</p>
 <button onclick="showPage('courses')">Explore Courses</button>
+</div>
+
+<div class="benefits">
+<h2>Program Benefits</h2>
+<ul>
+<li>✔ Hands-on Learning</li>
+<li>✔ Critical Thinking Development</li>
+<li>✔ Future Technology Skills</li>
+<li>✔ Innovation Mindset</li>
+<li>✔ Printable E-Certificate</li>
+</ul>
+</div>
+
 </div>
 
 <div class="home-info">
@@ -126,7 +327,7 @@ footer{text-align:center;padding:30px;background:#0b0f1a;opacity:.7}
 <div class="info-card">
 <img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232">
 <div class="info-text">
-<h3>Hands‑on Learning</h3>
+<h3>Hands-on Learning</h3>
 <p>Students build real circuits, robots and AI projects instead of just learning theory.</p>
 </div>
 </div>
@@ -155,26 +356,22 @@ footer{text-align:center;padding:30px;background:#0b0f1a;opacity:.7}
 </div>
 </div>
 
-
-<div class="info-card">
-<img src="https://images.unsplash.com/photo-1606326608690-4e0281b1e588">
-<div class="info-text">
-<h3>Printable Certificate</h3>
-<p>Students receive a downloadable E‑Certificate after completing the course. The certificate can be printed and added to academic portfolios.</p>
-</div>
-</div>
-
 </div>
 
 </section>
 
 <!-- COURSES -->
+
 <section id="courses" class="page">
-<div class="banner courses"><div>Explore Our Technology Courses</div></div>
+
+<div class="banner courses" style="background-image:url('https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=1600&q=80');">
+<div>Explore Our Technology Courses</div>
+</div>
 
 <h2 class="section-title">Courses</h2>
 
 <div class="cards">
+
 <div class="card">
 <h3>Breadboard Electronics</h3>
 <ul class="checklist">
@@ -198,7 +395,7 @@ footer{text-align:center;padding:30px;background:#0b0f1a;opacity:.7}
 <ul class="checklist">
 <li>✔ Build working robots</li>
 <li>✔ Understand automation</li>
-<li>✔ Hands‑on STEM innovation</li>
+<li>✔ Hands-on STEM innovation</li>
 </ul>
 </div>
 
@@ -207,27 +404,33 @@ footer{text-align:center;padding:30px;background:#0b0f1a;opacity:.7}
 <ul class="checklist">
 <li>✔ Learn AI fundamentals</li>
 <li>✔ Understand machine learning</li>
-<li>✔ Future‑ready technology skills</li>
+<li>✔ Future-ready technology skills</li>
 </ul>
 </div>
+
 </div>
 
 <button class="explore-btn" onclick="document.getElementById('courseTable').scrollIntoView()">View Course Details</button>
 
 <div id="courseTable" class="table-wrap" style="margin-top:60px">
+
 <h2 class="section-title">Course Details</h2>
+
 <table>
 <tr><th>Course</th><th>Tuition</th><th>Kit</th><th>Total</th></tr>
 <tr><td>Breadboard Electronics</td><td>500</td><td>1000</td><td>1500</td></tr>
 <tr><td>Micro Controller (Arduino UNO)</td><td>500</td><td>1500</td><td>2000</td></tr>
 <tr><td>Robotics</td><td>500</td><td>500</td><td>1000</td></tr>
-<tr><td>AI Basics</td><td>500</td><td>-</td><td>500</td></tr>
+<tr><td>AI Basics</td><td>1000</td><td>-</td><td>1000</td></tr>
 <tr><td>AI Advanced</td><td>500</td><td>8500</td><td>9000</td></tr>
 </table>
+
 </div>
 
 <h2 class="section-title">Book the Course</h2>
+
 <form>
+
 <input placeholder="First Name" required>
 <input placeholder="Last Name" required>
 
@@ -242,64 +445,120 @@ footer{text-align:center;padding:30px;background:#0b0f1a;opacity:.7}
 </select>
 
 <label>Select Courses</label>
+
 <input type="checkbox" value="1500"> Breadboard Electronics<br>
 <input type="checkbox" value="2000"> Arduino UNO<br>
 <input type="checkbox" value="1000"> Robotics<br>
-<input type="checkbox" value="500"> AI Basics<br>
+<input type="checkbox" value="1000"> AI Basics<br>
 <input type="checkbox" value="9000"> AI Advanced<br><br>
 
 <button type="button" class="calc" onclick="calculateTotal()">Calculate Total</button>
+
 <h3 id="total"></h3>
 
 <h3 style="margin-top:25px">Payment</h3>
 <p>Payment system — <b>Coming Soon</b></p>
+
 </form>
 
 </section>
 
 <!-- ROADMAP -->
+
 <section id="roadmap" class="page">
-<div class="banner roadmap">Learning Journey</div>
+
+<div class="banner roadmap" style="background-image:url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1600&q=80');">
+Learning Journey
+</div>
 
 <h2 class="section-title">Learning Roadmap</h2>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start">
+
 <div class="roadmap">
 <div class="step">Level 1 — Breadboard Electronics</div>
 <div class="step">Level 2 — Micro Controller (Arduino UNO)</div>
 <div class="step">Level 3 — Robotics</div>
 <div class="step">Level 4 — Artificial Intelligence</div>
 </div>
+
+<div style="background:#12182b;padding:30px;border-radius:10px;border:1px solid rgba(255,255,255,0.05)">
+<h3 style="font-family:'Orbitron';margin-bottom:20px;color:#4da3ff">Course Duration</h3>
+
+<ul style="line-height:2;font-size:17px">
+<li>Level 1 – 4 Days</li>
+<li>Level 2 – 4 Days</li>
+<li>Level 3 – 4 Days</li>
+<li>Level 4 (Basics) – 5 Days</li>
+<li>Level 4 (Advanced) – 5 Days</li>
+</ul>
+
+</div>
+
+</div>
+
 </section>
 
 <!-- FAQ -->
+
 <section id="faq" class="page">
-<div class="banner faq">Frequently Asked Questions</div>
+
+<div class="banner faq" style="background-image:url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1600&q=80');">
+Frequently Asked Questions
+</div>
 
 <h2 class="section-title">FAQ</h2>
+
 <div class="faq-item"><b>Who can join?</b><br>Students from Class 6 to Class 12.</div>
 <div class="faq-item"><b>Do I need prior knowledge?</b><br>No, beginners are welcome.</div>
-<div class="faq-item"><b>Will I receive a certificate?</b><br>Yes, a downloadable E‑Certificate is provided which students can print after completing the course.</div>
+<div class="faq-item"><b>Will I receive a certificate?</b><br>Yes, a downloadable E-Certificate is provided which students can print after completing the course.</div>
 <div class="faq-item"><b>Are classes online?</b><br>Yes.</div>
+
 </section>
 
 <!-- ABOUT -->
+
 <section id="about" class="page">
+
 <div class="banner about">About STEM Nexus</div>
 
 <h2 class="section-title">Our Mission</h2>
+
 <div class="cards">
+
 <div class="card">
-<h3>Founder</h3>
-<p>Dakkshaa N</p>
+<h3>Founder & CEO</h3>
+<p><b>Dakkshaa N</b></p>
+<p style="margin-top:10px;font-size:14px;opacity:.85">
+Class 12 student with a strong passion for technology and innovation. Completed a STEM internship and worked on real-life projects. Deeply interested in robotics, electronics, and artificial intelligence, with a focus on hands-on learning and building practical solutions.
+</p>
 </div>
+
 <div class="card">
-<h3>Co‑Founder</h3>
-<p>SK Lithika Sri</p>
+<h3>Co-Founder</h3>
+<p><b>SK Lithika Sri</b></p>
+<p style="margin-top:10px;font-size:14px;opacity:.85">
+Class 12 student passionate about technology and robotics. Interested in innovation, creative thinking, and contributing to STEM education initiatives.
+</p>
 </div>
+
+<div class="card">
+<h3>General Manager</h3>
+<p><b>AS Nivetthini</b></p>
+<p style="margin-top:10px;font-size:14px;opacity:.85">
+Class 12 student with a strong interest in the tech and robotics field. Focused on teamwork, coordination, and supporting the smooth execution of STEM programs.
+</p>
+</div>
+
 <div class="card">
 <h3>Vision</h3>
-<p>To inspire young innovators to explore robotics, electronics and artificial intelligence through hands‑on STEM education.</p>
+<p>
+To inspire young innovators to explore robotics, electronics and artificial intelligence through hands-on STEM education, led by students passionate about real-world technology.
+</p>
 </div>
+
 </div>
+
 </section>
 
 <footer>
@@ -307,19 +566,21 @@ footer{text-align:center;padding:30px;background:#0b0f1a;opacity:.7}
 </footer>
 
 <script>
+
 function showPage(id){
- document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'))
- document.getElementById(id).classList.add('active')
- window.scrollTo(0,0)
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'))
+document.getElementById(id).classList.add('active')
+window.scrollTo(0,0)
 }
 
 function calculateTotal(){
- let total=0
- document.querySelectorAll("input[type='checkbox']:checked").forEach(cb=>{
- total+=parseInt(cb.value)
- })
- document.getElementById("total").innerText="Total Bill: ₹"+total
+let total=0
+document.querySelectorAll("input[type='checkbox']:checked").forEach(cb=>{
+total+=parseInt(cb.value)
+})
+document.getElementById("total").innerText="Total Bill: ₹"+total
 }
+
 </script>
 
 </body>
